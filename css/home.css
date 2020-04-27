@@ -1,0 +1,40 @@
+.background-top{
+    height: 100vh;
+    background-image: url("/images/Background/APOD_13April.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gmt {
+    font-size: 18px;
+    margin: 0 0 15vh 5px;
+}
+
+.box {
+    width: 100%;
+    text-align: center;
+}
+
+.box h1{
+    font-size: 90px;
+}
+
+.navigation-home li{
+    font-size: 45px;
+    margin: 50px 0;
+}
+
+.link{
+    text-decoration: none;
+}
+
+.link:active{
+    color: #01A7C2;
+}
+
+.people-in-space{
+    position: fixed;
+    left: 5px;
+    bottom: 5px;
+    font-size: 18px;
+}

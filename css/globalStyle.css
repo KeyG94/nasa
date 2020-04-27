@@ -4,7 +4,21 @@
     #01A7C2 - blue  (buttons)
 */
 
+/* Font Family
+    Helvetica Neue
+    Arial
+*/
+
 * {
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #EAEBED;
+}
+body{
+    background-color: #000000;
+}
+
+h1{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
