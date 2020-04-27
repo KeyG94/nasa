@@ -1,0 +1,10 @@
+/* Color Pallette
+    #EAEBED - white (text)
+    #000000 - black (background)
+    #01A7C2 - blue  (buttons)
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
