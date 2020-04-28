@@ -1,6 +1,7 @@
 //clock app
 window.onload = function() {
     gmt_clock()
+    peopleInSpace()
 };
 
 function gmt_clock() {
@@ -33,3 +34,18 @@ function gmt_clock() {
 }
 
 //people in space API request
+function peopleInSpace() {
+    fetch("http://api.open-notify.org/astros.json")
+        .then((res) => res.json())
+        .then((data) => {
+            console.log(data.people)
+            let output = `Humans in space: ${data.number}`
+
+            for (let i = 0; i < data.people.length; i++ ){
+                output += `, ${data.people[i].name}(${data.people[i].craft})`
+            }
+
+            console.log(data.people.length)
+            document.getElementById('peopleInSpace').innerHTML = output;
+        })
+};
