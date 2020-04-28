@@ -1,8 +1,9 @@
-.background-top{
-    height: 100vh;
+body{
+    min-height: 100vh;
     background-image: url("/images/Background/APOD_13April.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .gmt {
@@ -26,6 +27,7 @@
 
 .link{
     text-decoration: none;
+    
 }
 
 .link:active{
