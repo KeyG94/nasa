@@ -36,7 +36,7 @@ body{
 
 .people-in-space{
     position: fixed;
-    left: 0;
+    left: 5px;
     bottom: 5px;
     font-size: 18px;
 }

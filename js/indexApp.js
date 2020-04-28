@@ -39,10 +39,10 @@ function peopleInSpace() {
         .then((res) => res.json())
         .then((data) => {
             console.log(data.people)
-            let output = `Humans in space: ${data.number}`
+            let output = `${data.number} people in space:`
 
             for (let i = 0; i < data.people.length; i++ ){
-                output += `, ${data.people[i].name}(${data.people[i].craft})`
+                output += ` ${data.people[i].name}(${data.people[i].craft}), `
             }
 
             console.log(data.people.length)
