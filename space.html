@@ -3,9 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nasa | Space</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" href="css/globalStyle.css">
+    <link rel="stylesheet" type="text/css" href="css/space.css">
+    <title>Nasa | Contact</title>
 </head>
 <body>
-    
+    <!--global navigation-->
+    <nav class="navbar">
+        <div class="container">
+            <div class="hamburger">
+                <div class="line1 line"></div>
+                <div class="line2 line"></div>
+                <div class="line3 line"></div>
+            </div>
+            <ul>
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="" class="nav-link active">Space</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="" class="nav-link">Media</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--navigation for larger screens/desktops-->
+    <div class="large-screen-nav" id="large-screen-nav">
+        <ul>
+            <li class="nav-item-lg"><a href="" class="nav-link-lg">Home</a></li>
+            <li class="nav-item-lg"><a href="" class="nav-link-lg active">Space</a></li>
+            <li class="nav-item-lg"><a href="" class="nav-link-lg">Contact</a></li>
+            <li class="nav-item-lg"><a href="" class="nav-link-lg">Media</a></li>
+        </ul> 
+    </div>
+    <!--end of global navigation-->
+    <h1>Space</h1>
+    <!--dummy of JS table-->
+    <h2>Asteroids near earth today</h2>
+    <table id="asteroid-table" class="asteroid-table"></table>
+    <div class="mars-container">
+        <h2>Mars Rover Project</h2>
+        <p>Short something about mars project</p>
+        <a href="#" target="_blank" class="link" rel="noopener noreferrer">Learn More</a>
+        <h3>Mars Rover Photos</h3>
+        <div id="mars-rover"></div>
+        <a href="https://mars.nasa.gov/mer/multimedia/images/" target="_blank" class="link" rel="noopener noreferrer">View More</a>
+        <h3>Latest Mars Rover Video</h3>
+        <iframe src="https://mars.nasa.gov/layout/embed/video/?v=412" width="100%" height="auto" scrolling="no" frameborder="0"></iframe>
+        <a href="https://mars.nasa.gov/mer/multimedia/videos/" target="_blank">Learn More</a>
+    </div>
+
 </body>
+<script src="js/app-navi.js"></script>
+<script src="js/app-space.js" type="module"></script>
 </html>
