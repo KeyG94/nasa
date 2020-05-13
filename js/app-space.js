@@ -36,9 +36,15 @@ async function nearEarthObj() {
             let name = element[i].name;
             let hazardous = element[i].is_potentially_hazardous_asteroid;
             let missDistance = element[i].close_approach_data[0].miss_distance.kilometers;
+            let size = element[i].estimated_diameter.kilometers.estimated_diameter_max;
+
             output += `
-            <tr class="table-row">Name: ${name}, Potential Danger: ${hazardous}, Miss Distance: ${missDistance}km</tr><br>
-            `
+            <tr class="table-row">
+                <td>${name}</td>
+                <td>${size}</td>
+                <td>${hazardous}</td>
+            </tr>
+        `
         }
         document.getElementById('asteroid-table').innerHTML = output
 	});
@@ -54,11 +60,10 @@ async function marsPhotos() {
 
         let output = '';
 
-        for (let i = 0; i < 14; i+=2){
+        for (let i = 0; i < 10; i++){
 
             let img_src = data.photos[i].img_src;
-
-            output += `<img src="${img_src}" class="rover-image" width="100%" height="auto" alt="image from mars, Front Hazard camera">`
+            output += `<a href="${img_src}" target="_blank"><img src="${img_src}" class="rover-image" alt="image from mars, Front Hazard camera"></a>`
 
             document.getElementById('mars-rover').innerHTML = output
 

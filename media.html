@@ -6,13 +6,127 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link rel="stylesheet" type="text/css" href="css/globalStyle.css">
-    <link rel="stylesheet" type="text/css" href="css/contact.css">
-    <link rel="stylesheet" type="text/css" href="css/home.css">
-    <link rel="stylesheet" type="text/css" href="css/space.css">
+    <link rel="stylesheet" type="text/css" href="css/media.css">
     <title>Nasa | Contact</title>
 </head>
 <body>
-    
+    <!--global navigation-->
+    <nav class="navbar">
+        <div class="container">
+            <div class="hamburger">
+                <div class="line1 line"></div>
+                <div class="line2 line"></div>
+                <div class="line3 line"></div>
+            </div>
+            <ul>
+                <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link active">Space</a></li>
+                <li class="nav-item"><a href="/contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="/media.html" class="nav-link">Media</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--navigation for larger screens/desktops-->
+    <div class="large-screen-nav" id="large-screen-nav">
+        <ul>
+            <li class="nav-item-lg"><a href="/index.html" class="nav-link-lg">Home</a></li>
+            <li class="nav-item-lg"><a href="#" class="nav-link-lg active">Space</a></li>
+            <li class="nav-item-lg"><a href="/contact.html" class="nav-link-lg">Contact</a></li>
+            <li class="nav-item-lg"><a href="/media.html" class="nav-link-lg">Media</a></li>
+        </ul> 
+    </div>
+    <!--end of global navigation-->
+    <div class="latest-video" id="latest-video">
+        <h1>Media</h1>
+        <p>Description</p>
+    </div>
+    <div class="toggle" id="toggle">
+       <a href="#">latest</a>
+       <span></span>
+       <a href="#">Images</a>
+    </div>
+    <!--Latest tab---->
+    <div class="latest-container" id="latest-container" style="display: none;">
+        <div class="apod">
+            <h2>Picture of the day</h2>
+            <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" alt="placeholder">
+            <div class="image-title">Title: example</div>
+        </div>
+        <div class="latest" id="latest">
+            <h3>Latest</h3>
+            <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" alt="">
+            <h4>Mission X</h4>
+            <p>description</p>
+            <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" alt="">
+            <h4>Mission X</h4>
+            <p>description</p>
+            <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" alt="">
+            <h4>Mission Y</h4>
+            <p>description</p>
+        </div>
+        <div class="timeline" id="timeline">
+            <h3>Launches and Landings</h3>
+            <ul>
+                <div class="list-item">
+                    <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" width="60px" alt="">
+                    <h5>Date: 23 may</h5>
+                    <p>relive the launch etc..</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div class="list-item">
+                    <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" width="60px" alt="">
+                    <h5>Date: 23 may</h5>
+                    <p>relive the launch etc..</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div class="list-item">
+                    <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg"  width="60px" alt="">
+                    <h5>Date: 23 may</h5>
+                    <p>relive the launch etc..</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div class="list-item">
+                    <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" width="60px" alt="">
+                    <h5>Date: 23 may</h5>
+                    <p>relive the launch etc..</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div class="list-item">
+                    <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" width="60px" alt="">
+                    <h5>Date: 23 may</h5>
+                    <p>relive the launch etc..</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <!--images tab-->
+    <div class="images-tab" id="images-tab">
+        <div class="search-box">
+            <h2>Image Libary</h2>
+            <input type="text" class="search-bar" id="search-bar" placeholder="Search...">
+        </div>
+    </div>
+    <div class="image-content" id="image-content">
+        <!--images from search bar come here-->
+        <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" width="150px" alt="">
+        <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" width="150px" alt="">
+        <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" width="150px" alt="">
+        <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" width="150px" alt="">
+        <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" width="150px" alt="">
+        <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" width="150px" alt="">
+        <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" width="150px" alt="">
+        <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" width="150px" alt="">
+        <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" width="150px" alt="">
+        <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" width="150px" alt="">
+        <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" width="150px" alt="">
+        <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" width="150px" alt="">
+        <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" width="150px" alt="">
+        <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" width="150px" alt="">
+        <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" width="150px" alt="">
+    </div>
 </body>
 <script src="js/app-navi.js"></script>
+<script src="js/app-media.js"></script>
+<script src="js/app-space.js" type="module"></script>
 </html>
