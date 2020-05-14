@@ -51,6 +51,7 @@ h1{
     top: 0;
     min-width: 25%;
     transition: ease-in .4s;
+    z-index: 1000;
 }
 
 .large-screen-nav ul{
@@ -110,6 +111,7 @@ h1{
     top: 0;
     right: -100vw;
     transition: ease-in .5s;
+    z-index: 1000;
 }
 
 .transform{

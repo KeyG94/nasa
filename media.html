@@ -7,7 +7,7 @@
     <meta name="keywords" content="">
     <link rel="stylesheet" type="text/css" href="css/globalStyle.css">
     <link rel="stylesheet" type="text/css" href="css/media.css">
-    <title>Nasa | Contact</title>
+    <title>Nasa | Media</title>
 </head>
 <body>
     <!--global navigation-->
@@ -37,30 +37,35 @@
     </div>
     <!--end of global navigation-->
     <div class="latest-video" id="latest-video">
-        <h1>Media</h1>
-        <p>Description</p>
+        <div class="top-filter"></div>
+        <iframe id="yt-video-head" class="video" src="https://www.youtube.com/embed/EEIk7gwjgIM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="bottom-filter"></div>
+    </div>
+    <div class="title">
+        <h1>Earth from Space</h1>
+        <p>Nasa Livestream from ISS</p>
     </div>
     <div class="toggle" id="toggle">
-       <a href="#">latest</a>
-       <span></span>
-       <a href="#">Images</a>
+       <a href="#" class="active-toggle clear-text" id="latest" onclick="toggleClick('latest')">Latest</a>
+       <span id="vertical-line"></span>
+       <a href="#" class="clear-text" id="images" onclick="toggleClick('images')">Images</a>
     </div>
     <!--Latest tab---->
-    <div class="latest-container" id="latest-container" style="display: none;">
-        <div class="apod">
+    <div class="latest-container" id="latest-container">
+        <div class="apod-wrap" id="apod-wrap">
             <h2>Picture of the day</h2>
-            <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" alt="placeholder">
+            <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" style="max-width:100vw; overflow:hidden;" alt="placeholder">
             <div class="image-title">Title: example</div>
         </div>
         <div class="latest" id="latest">
             <h3>Latest</h3>
-            <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" alt="">
+            <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" style="max-width:100vw; overflow:hidden;" alt="">
             <h4>Mission X</h4>
             <p>description</p>
-            <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" alt="">
+            <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" style="max-width:100vw; overflow:hidden;" alt="">
             <h4>Mission X</h4>
             <p>description</p>
-            <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" alt="">
+            <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" style="max-width:100vw; overflow:hidden;" alt="">
             <h4>Mission Y</h4>
             <p>description</p>
         </div>
@@ -101,32 +106,18 @@
         </div>
     </div>
     <!--images tab-->
-    <div class="images-tab" id="images-tab">
+    <div class="images-tab display-none" id="images-tab">
         <div class="search-box">
             <h2>Image Libary</h2>
             <input type="text" class="search-bar" id="search-bar" placeholder="Search...">
         </div>
-    </div>
-    <div class="image-content" id="image-content">
-        <!--images from search bar come here-->
-        <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" width="150px" alt="">
-        <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" width="150px" alt="">
-        <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" width="150px" alt="">
-        <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" width="150px" alt="">
-        <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" width="150px" alt="">
-        <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" width="150px" alt="">
-        <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" width="150px" alt="">
-        <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" width="150px" alt="">
-        <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" width="150px" alt="">
-        <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" width="150px" alt="">
-        <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" width="150px" alt="">
-        <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" width="150px" alt="">
-        <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" width="150px" alt="">
-        <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" width="150px" alt="">
-        <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" width="150px" alt="">
+    
+        <div class="image-content" id="image-content">
+            <!--images from search bar come here-->
+            
+        </div>
     </div>
 </body>
 <script src="js/app-navi.js"></script>
 <script src="js/app-media.js"></script>
-<script src="js/app-space.js" type="module"></script>
 </html>

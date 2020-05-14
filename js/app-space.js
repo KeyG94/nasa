@@ -6,26 +6,28 @@ window.onload = function(){
 
 //fetch nasa API NeoWs
 async function nearEarthObj() {
-	//get todays date in yyyy-mm-dd format
-	let today = new Date();
-	let dd = today.getDate();
-	let mm = today.getMonth() + 1;
-	const yyyy = today.getFullYear();
 
-	// handle if number is less than 10, display 09 instead of 9
-	if (dd < 10) {
-		dd = '0' + dd;
-	}
-	if (mm < 10) {
-		mm = '0' + mm;
-	}
+    const today = new Date().toISOString().slice(0,10)
+	// //get todays date in yyyy-mm-dd format
+	// let today = new Date();
+	// let dd = today.getDate();
+	// let mm = today.getMonth() + 1;
+	// const yyyy = today.getFullYear();
 
-	today = yyyy + '-' + dd + '-' + mm;
+	// // handle if number is less than 10, display 09 instead of 9
+	// if (dd < 10) {
+	// 	dd = '0' + dd;
+	// }
+	// if (mm < 10) {
+	// 	mm = '0' + mm;
+	// }
+
+	// today = yyyy + '-' + mm + '-' + dd;
 
 	const url = 'https://api.nasa.gov/neo/rest/v1/feed?';
-	const start_date = today;
-	const end_date = today;
-	const afeed = `${url}` + `start_date=${start_date}&` + `end_date=${end_date}` + `&api_key=${key}`;
+	// const start_date = today;
+	// const end_date = today;
+	const afeed = `${url}` + `start_date=${today}&` + `end_date=${today}` + `&api_key=${key}`;
     let output = '';
 
 	await fetch(afeed).then((res) => res.json()).then((data) => {
