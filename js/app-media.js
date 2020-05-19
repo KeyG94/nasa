@@ -109,63 +109,54 @@ async function getLaunches() {
 	launchesParagraph.innerHTML = '<p>Loading...</p>';
 
 	await fetch(spacexUrl).then((res) => res.json()).then((data) => {
-        launchesParagraph.innerHTML = '';
-        data = data.reverse();
-        console.log(data)
+		launchesParagraph.innerHTML = '';
+
+		data = data.reverse();
 		for (let i = 0; i < data.length; i++) {
 			//changeble data
 			let image = data[i].links.mission_patch_small;
 			let more = data[i].links.article_link;
-			let details = data[i].details;
+            let details = data[i].details;
+            
+
 
 			//constant data
 			const date = data[i].launch_date_utc.slice(0, 10);
 			const missionName = data[i].mission_name;
 			const rocketName = data[i].rocket.rocket_name;
-			const launchSite = data[i].launch_site.site_name_long;
+            const launchSite = data[i].launch_site.site_name_long;
 
-			//if image patch empty
-			if (image === null) {
-				// return placeholder
-				image = 'https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg';
-			}
+            //if details is empty
+            if (details === null) {    
+                details = 'Description unavailable at this moment'
+            }
 
-			//if article link is null
-			if (more === null) {
-				//return nasa launches page
-				more = 'https://www.nasa.gov/launchschedule/';
-			}
+            if (image === null){
+                image = 'https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/blackmarble_2016_americas_composite.png'
+            }
 
-			//if details is null
-			if (details === null) {
-				//return standard line
-				details = 'No details available for this mission';
-			}
+            //if article link is null
+            if (more === null) {
+                more = 'https://www.nasa.gov/launchschedule/'
+            }
 
-			//output data to cards
-			launchesParagraph.innerHTML += `
-            <li class="list-item">
-                <a href="${more}"><img class="card-image" src="${image}" alt="launch patch"></a>
-                <div class="left-box">
-                    <h6 class="launch-date">Date: ${date}</h6>
-                    <h5 class="mission-name">Mission: ${missionName}</h5>
-                    <p class="details">Description: ${details}</p>    
-                </div>
-                <div class="right-box">
-                    <h6 class="rocket-name">${rocketName}</h6>
-                    <h6 class="launch-site">${launchSite}</h6>
-                    <a target="_blank" href="${more}">Learn More</a>
-                </div>
-            </li>
-            `;
-
-			// console.log(image);
-			// console.log(date);
-			// console.log(more);
-			// console.log('mission name: ' + missionName);
-			// console.log('rocket name: ' + rocketName);
-			// console.log(details)
-			// console.log('Launch Site: ' + launchSite)
+          //output data to cards
+                launchesParagraph.innerHTML += `
+                <li class="list-item">
+                    <a href="${more}"><img class="card-image" src="${image}" alt="launch patch"></a>
+                    <div class="left-box">
+                        <h6 class="launch-date">Date: ${date}</h6>
+                        <h5 class="mission-name">Mission: ${missionName}</h5>
+                        <p class="details">Description: ${details}</p>    
+                    </div>
+                    <div class="right-box">
+                        <h6 class="rocket-name">${rocketName}</h6>
+                        <h6 class="launch-site">${launchSite}</h6>
+                        <a target="_blank" href="${more}">Learn More</a>
+                    </div>
+                </li>
+                `;
+            	
 		}
 	});
 }
