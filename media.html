@@ -38,7 +38,7 @@
     <!--end of global navigation-->
     <div class="latest-video" id="latest-video">
         <div class="top-filter"></div>
-        <iframe id="yt-video-head" class="video" src="https://www.youtube.com/embed/EEIk7gwjgIM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe id="yt-video-head" class="video" src="https://www.youtube.com/embed/EEIk7gwjgIM?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <div class="bottom-filter"></div>
     </div>
     <div class="title">
@@ -52,63 +52,27 @@
     </div>
     <!--Latest tab---->
     <div class="latest-container" id="latest-container">
-        <div class="apod-wrap" id="apod-wrap">
-            <h2>Picture of the day</h2>
-            <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" style="max-width:100vw; overflow:hidden;" alt="placeholder">
-            <div class="image-title">Title: example</div>
-        </div>
+        <div class="apod-wrap" id="apod-wrap"></div>
         <div class="latest" id="latest">
             <h3>Latest</h3>
-            <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" style="max-width:100vw; overflow:hidden;" alt="">
-            <h4>Mission X</h4>
-            <p>description</p>
-            <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" style="max-width:100vw; overflow:hidden;" alt="">
-            <h4>Mission X</h4>
-            <p>description</p>
-            <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" style="max-width:100vw; overflow:hidden;" alt="">
-            <h4>Mission Y</h4>
-            <p>description</p>
+            <div class="frame-container">
+                <iframe class="video-feed" src="https://www.youtube.com/embed/5EgRrAK8_HQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <h4>NASA and SpaceX prepare to #LaunchAmerica</h4>
+            <p>Together with SpaceX, NASA will return human spaceflight to American soil after nearly a decade. SpaceX will launch people into space for the first time ever with astronauts Bob Behnken and Doug Hurley on board Crew Dragon, which will dock to the International Space Station.</p>
         </div>
-        <div class="timeline" id="timeline">
+        <div class="timeline" >
             <h3>Launches and Landings</h3>
-            <ul>
-                <div class="list-item">
-                    <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" width="60px" alt="">
-                    <h5>Date: 23 may</h5>
-                    <p>relive the launch etc..</p>
-                    <a href="#">Learn More</a>
-                </div>
-                <div class="list-item">
-                    <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" width="60px" alt="">
-                    <h5>Date: 23 may</h5>
-                    <p>relive the launch etc..</p>
-                    <a href="#">Learn More</a>
-                </div>
-                <div class="list-item">
-                    <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg"  width="60px" alt="">
-                    <h5>Date: 23 may</h5>
-                    <p>relive the launch etc..</p>
-                    <a href="#">Learn More</a>
-                </div>
-                <div class="list-item">
-                    <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" width="60px" alt="">
-                    <h5>Date: 23 may</h5>
-                    <p>relive the launch etc..</p>
-                    <a href="#">Learn More</a>
-                </div>
-                <div class="list-item">
-                    <img src="https://lakelandescaperoom.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" width="60px" alt="">
-                    <h5>Date: 23 may</h5>
-                    <p>relive the launch etc..</p>
-                    <a href="#">Learn More</a>
-                </div>
+            <button id="timeline-button">Load</button>
+            <ul id="timeline">
+                <!--cards of launches-->
             </ul>
         </div>
     </div>
     <!--images tab-->
     <div class="images-tab display-none" id="images-tab">
         <div class="search-box">
-            <h2>Image Libary</h2>
+            <h2>Image libary</h2>
             <input type="text" class="search-bar" id="search-bar" placeholder="Search...">
         </div>
     
