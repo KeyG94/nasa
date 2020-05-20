@@ -102,11 +102,12 @@ async function getPictureOfDay() {
 const timeLineButton = document.getElementById('timeline-button');
 const spacexUrl = 'https://api.spacexdata.com/v3/launches';
 let launchesParagraph = document.getElementById('timeline');
+const createButton = document.getElementById('create-button');
 
 timeLineButton.addEventListener('click', getLaunches);
 
 async function getLaunches() {
-	launchesParagraph.innerHTML = '<p>Loading...</p>';
+	timeLineButton.innerHTML = '<p>Loading...</p>';
 
 	await fetch(spacexUrl).then((res) => res.json()).then((data) => {
 		launchesParagraph.innerHTML = '';
@@ -116,32 +117,31 @@ async function getLaunches() {
 			//changeble data
 			let image = data[i].links.mission_patch_small;
 			let more = data[i].links.article_link;
-            let details = data[i].details;
-            
-
+			let details = data[i].details;
 
 			//constant data
 			const date = data[i].launch_date_utc.slice(0, 10);
 			const missionName = data[i].mission_name;
 			const rocketName = data[i].rocket.rocket_name;
-            const launchSite = data[i].launch_site.site_name_long;
+			const launchSite = data[i].launch_site.site_name_long;
 
-            //if details is empty
-            if (details === null) {    
-                details = 'Description unavailable at this moment'
-            }
+			//if details is empty
+			if (details === null) {
+				details = 'Description unavailable at this moment';
+			}
 
-            if (image === null){
-                image = 'https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/blackmarble_2016_americas_composite.png'
-            }
+			if (image === null) {
+				image =
+					'https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/blackmarble_2016_americas_composite.png';
+			}
 
-            //if article link is null
-            if (more === null) {
-                more = 'https://www.nasa.gov/launchschedule/'
-            }
+			//if article link is null
+			if (more === null) {
+				more = 'https://www.nasa.gov/launchschedule/';
+			}
 
-          //output data to cards
-                launchesParagraph.innerHTML += `
+			//output data to cards
+			launchesParagraph.innerHTML += `
                 <li class="list-item">
                     <a href="${more}"><img class="card-image" src="${image}" alt="launch patch"></a>
                     <div class="left-box">
@@ -156,8 +156,23 @@ async function getLaunches() {
                     </div>
                 </li>
                 `;
-            	
 		}
-	});
+        timeLineButton.classList.add('display-none');
+        createButton.innerHTML = '<button id="hide" onclick="hideLaunches()">Toggle Content</button>';
+    });
 }
-getLaunches();
+
+
+
+function hideLaunches(){
+
+    //if button contains display-none
+    if(launchesParagraph.classList.contains('display-none')){
+        //remove the class
+        launchesParagraph.classList.remove('display-none');
+    } else {
+        //add class display-none
+        launchesParagraph.classList.add('display-none')
+    }
+
+}
