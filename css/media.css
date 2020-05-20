@@ -253,10 +253,13 @@
 .launch-date{
     display: block;
     width: 100%;
+    font-size: 16px;
+    font-weight: 100;
 }
 
 .mission-name{
     width: 100%;
+    font-size: 16px;
 }
 
 .launch-site{
@@ -290,7 +293,7 @@
 }
 
 @media screen and (max-width: 413px){
-    .rocket-name, .launch-date, .launch-site{
+    .rocket-name, .launch-site{
         display: none;
     }
 

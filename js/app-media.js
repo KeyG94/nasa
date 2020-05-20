@@ -147,7 +147,7 @@ async function getLaunches() {
                     <div class="left-box">
                         <h6 class="launch-date">Date: ${date}</h6>
                         <h5 class="mission-name">Mission: ${missionName}</h5>
-                        <p class="details">Description: ${details}</p>    
+                        <p class="details">${details}</p>    
                     </div>
                     <div class="right-box">
                         <h6 class="rocket-name">${rocketName}</h6>
