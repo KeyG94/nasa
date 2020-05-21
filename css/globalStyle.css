@@ -16,6 +16,7 @@
 	font-family: Arial, Helvetica, sans-serif;
 	color: #eaebed;
 }
+
 @media screen and (max-width: 177px) {
 	html {
 		display: none;
@@ -54,7 +55,7 @@ h1 {
 	right: 0;
 	top: 0;
 	min-width: 25%;
-	transition: ease-in .4s;
+	transition: ease-in .1s;
 	z-index: 1000;
 }
 
@@ -94,6 +95,9 @@ h1 {
 	cursor: pointer;
 	flex-direction: column;
 	justify-content: space-around;
+	background-color: rgba(0,0,0,0.7);
+	box-shadow: 0px 0px 6px rgba(0,0,0,0.9);
+	border-radius: 3px;
 }
 
 .line {

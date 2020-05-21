@@ -1,10 +1,14 @@
+html{
+	background-color: black;
+}
+
 body {
 	background-color: black;
 	min-height: 100vh;
-	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
+	background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)),
 		url('/images/Background/EarthContactBackground.jpg');
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: contain;
 	background-attachment: fixed;
 	background-position: center;
 	overflow-x: hidden;

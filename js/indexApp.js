@@ -39,7 +39,7 @@ function peopleInSpace() {
 		let output = `${data.number} people in space:`;
 
 		for (let i = 0; i < data.people.length; i++) {
-			output += ` <a href="https://www.nasa.gov/astronauts" target="_blank" class="link">${data.people[i]
+			output += ` <a href="http://www.nasa.gov/astronauts" target="_blank" class="link">${data.people[i]
 				.name}(${data.people[i].craft})</a>, `;
 		}
 

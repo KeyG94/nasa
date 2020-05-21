@@ -4,6 +4,7 @@
 	/*Possible pic of day*/
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-position: center;
 	background-attachment: fixed;
 }
 
