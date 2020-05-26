@@ -34,7 +34,7 @@ function gmt_clock() {
 
 //people in space API request
 function peopleInSpace() {
-	fetch('http://api.open-notify.org/astros.json').then((res) => res.json()).then((data) => {
+	fetch('https://noroffcors.herokuapp.com/http://api.open-notify.org/astros.json').then((res) => res.json()).then((data) => {
 		console.log(data.people);
 		let output = `${data.number} people in space:`;
 
