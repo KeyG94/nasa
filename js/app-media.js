@@ -40,7 +40,7 @@ async function getImageLibary(query) {
 			const image = item.links[0].href;
 			const description = item.data[0].description;
 
-			getImageDom.innerHTML += `<img src="${image}" class="feed-images" alt="${description}">`;
+			getImageDom.innerHTML += `<a href="${image}" target="_blank"><img src="${image}" class="feed-images" alt="${description}"></a>`;
 		}
 	});
 }
@@ -143,7 +143,7 @@ async function getLaunches() {
 			//output data to cards
 			launchesParagraph.innerHTML += `
                 <li class="list-item">
-                    <a href="${more}"><img class="card-image" src="${image}" alt="launch patch"></a>
+                    <img class="card-image" src="${image}" alt="launch patch">
                     <div class="left-box">
                         <h6 class="launch-date">Date: ${date}</h6>
                         <h5 class="mission-name">Mission: ${missionName}</h5>
