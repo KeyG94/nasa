@@ -157,22 +157,18 @@ async function getLaunches() {
                 </li>
                 `;
 		}
-        timeLineButton.classList.add('display-none');
-        createButton.innerHTML = '<button id="hide" onclick="hideLaunches()">Toggle Content</button>';
-    });
+		timeLineButton.classList.add('display-none');
+		createButton.innerHTML = '<button id="hide" onclick="hideLaunches()">Toggle Content</button>';
+	});
 }
 
-
-
-function hideLaunches(){
-
-    //if button contains display-none
-    if(launchesParagraph.classList.contains('display-none')){
-        //remove the class
-        launchesParagraph.classList.remove('display-none');
-    } else {
-        //add class display-none
-        launchesParagraph.classList.add('display-none')
-    }
-
+function hideLaunches() {
+	//if button contains display-none
+	if (launchesParagraph.classList.contains('display-none')) {
+		//remove the class
+		launchesParagraph.classList.remove('display-none');
+	} else {
+		//add class display-none
+		launchesParagraph.classList.add('display-none');
+	}
 }
