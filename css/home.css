@@ -1,6 +1,6 @@
 .background-top {
-	min-height: 100vh;
-	background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/images/Background/APOD_13April.png');
+	min-height: min-content;
+	background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6)), url('/images/Background/selfieSpace.png');
 	/*Possible pic of day*/
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -10,14 +10,26 @@
 
 .gmt {
 	font-size: 18px;
-	margin: 0 0 15vh 5px;
+	margin: 0 0 5px;
 	text-shadow: 1px 1px 3px black;
 }
 
 .box {
 	width: 100%;
+	height:100vh;
+	max-height: 100vh;
+	align-content: center;
 	text-align: center;
 }
+
+/* .box{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -50px;
+	margin-left: -100px;
+	transform: translate(-50%, -50%);
+} */
 
 .box h1 {
 	font-size: 90px;
@@ -29,6 +41,21 @@
 	margin: 50px 0;
 }
 
+@media only screen and (max-width: 1023px){
+	.box h1 {
+		font-size: 70px;
+	}
+	
+	.navigation-home li {
+		font-size: 30px;
+	}
+}
+
+.people-in-space {
+	font-size: 14px;
+	text-shadow: 1px 1px 3px black;
+}
+
 @media only screen and (min-width: 1023px) {
 	.navigation-home {
 		display: flex;
@@ -37,6 +64,10 @@
 		align-items: center;
 		list-style: none;
 		font-size: 50px;
+	}
+
+	.people-in-space{
+		margin-top: 15%;
 	}
 }
 
@@ -51,12 +82,4 @@
 
 .link:hover {
 	color: #01a7c2;
-}
-
-.people-in-space {
-	position: fixed;
-	left: 5px;
-	bottom: 5px;
-	font-size: 18px;
-	text-shadow: 1px 1px 3px black;
 }
