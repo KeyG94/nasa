@@ -1,6 +1,6 @@
 .background-top {
 	min-height: 100vh;
-	background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/images/Background/APOD_13April.jpg');
+	background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/images/Background/APOD_13April.png');
 	/*Possible pic of day*/
 	background-repeat: no-repeat;
 	background-size: cover;
